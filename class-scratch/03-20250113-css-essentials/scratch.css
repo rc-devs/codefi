@@ -1,0 +1,166 @@
+
+.sticky-head{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid;
+  position: sticky;
+  top: 0;
+  background-color: aqua;
+}
+
+.menu-div {
+  background-image: url(/codefi-logo.jpg);
+  background-repeat: no-repeat;
+}
+.menu {
+  margin-bottom: 10px;
+}
+
+.menu:hover {
+
+}
+
+.modal-group {
+  height: 100px;
+
+}
+
+.modal-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.modal {
+  display: inline-block;
+  background-color: bisque;
+  border: solid 2px blue;
+  position: fixed;
+  padding: 1em;
+  top: 50%;
+  left: 35%;
+  right: 35%;
+}
+
+.close{
+  border: 2px solid black;
+  padding: .05em;
+  border-radius: 1em;
+}
+
+.close:hover {
+  background-color: red;
+}
+
+.close:focus {
+  cursor: pointer;
+}
+
+
+.divs{
+  border: 2px solid black;
+}
+.d1 {
+  padding: 20px;
+  border: 2px solid black;
+  margin: 30px;
+}
+
+.d1 {
+  padding: 50px;
+  border: 2px;
+  margin: 10px;
+}
+
+.d1 {
+  padding: 10px ;
+  border: 2px;
+  margin: 1px;
+}
+
+li {
+  display: inline;
+  border: 2px;
+  margin: 10px;
+
+}
+
+li:hover {
+  color: black;
+  background-color: red;
+  cursor: pointer;
+}
+
+.hero {
+  background-image: url(/codefi-logo.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: 100%;
+}
+
+button {
+  position: relative;
+  margin-top: 10px;
+  margin-left: 10px;
+} 
+
+.container {
+  height: 200px;
+  width: auto;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+}
+
+.flex-box {
+  display: flex;
+  height: 300px;
+  width: 200px;
+  border: solid 2px;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.deck {
+  border: 2px solid blue;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.card {
+  display: flex;
+  height: 15rem;
+  border: 3px solid red;
+  width: 10rem;
+  border-radius: 30px;
+  margin: 1rem;
+  padding: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* media queries */
+
+@media (max-width:700px) {
+  .deck {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
