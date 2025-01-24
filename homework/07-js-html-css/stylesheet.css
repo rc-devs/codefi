@@ -1,0 +1,15 @@
+*{
+  background-color: lightyellow;
+}
+body {
+  text-align: center;
+}
+
+button {
+  position: relative;
+  border: 2px solid black;
+  background-color: blue;
+  color: white;
+  border-radius: 2em;
+  padding: 0.5em;
+}

@@ -1,0 +1,104 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin-top: 50px;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  text-align: center;
+}
+
+/* Button Styling */
+.subscribe-button {
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+/* Subscribed State */
+.is-subscribed {
+  background-color: rgb(240, 240, 240);
+  color: black;
+}
+
+/* Like Button Styling */
+.like-button {
+  border: none;
+  background-color: lightgray;
+  color: black;
+  padding: 10px 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.liked {
+  background-color: red;
+  color: white;
+  margin-left: 20px;
+}
+
+.notifications-button {
+  background-color: gray;
+}
+
+.notifications-enabled {
+  background-color: green;
+}
+
+.cost-input {
+  font-size: 15px;
+  padding: 10px;
+}
+
+.calculate-button {
+  background-color: green;
+  color: white;
+  border: none;
+  font-size: 15px;
+  padding: 12px 15px;
+  cursor: pointer;
+}
+.cart-button {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.in-cart {
+  background-color: red;
+}
+
+.cart-badge {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 1em; /* added position and margin to fix badge that was stretched on bottom of screen */
+  margin-bottom: 10px;
+}
+
+body.dark-mode {
+  background-color: rgb(48, 48, 48);
+  color: rgb(230, 195, 239);
+}
+
+body.light-mode {
+  background-color: white;
+  color: black;
+}
+

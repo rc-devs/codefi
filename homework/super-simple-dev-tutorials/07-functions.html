@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functions</title>
+</head>
+<body>
+  <script>
+  /* function function1() {
+    console.log("hello");
+    console.log(2 + 2);
+  }
+
+  function1();
+  function1(); */
+
+  //parameter
+  /* function calculateTax (parameter1) {
+    console.log(parameter1 * 0.1);
+  }
+  calculateTax();
+  calculateTax(0);
+  calculateTax(200);
+  calculateTax(3000);
+  calculateTax(1530); */
+
+
+// multiple parameters
+ /*  function calculateTax(cost, taxPercent) {
+	console.log(cost * taxPercent);
+}
+  calculateTax(1000, 0.1);
+  calculateTax(2345, 0.08);
+  calculateTax(2000, 1.0);
+  calculateTax(200); //logs undefined or NaN, bc missing second parameter */
+
+//default value for parameter
+  function calculateTax(cost, taxPercent = 0.1) {
+	console.log(cost * taxPercent);
+}
+
+  calculateTax(1000, 0.1);
+  calculateTax(2345, 0.08);
+  calculateTax(2000, 1.0);
+  calculateTax(200); //logs 20, bc second parameter default is 0.1
+
+
+  </script>
+</body>
+</html>
