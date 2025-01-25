@@ -78,8 +78,16 @@ button {
   cursor: pointer;
 }
 
+.cart-button:hover {
+  background-color: rgb(67, 237, 67);
+}
+
 .in-cart {
   background-color: red;
+}
+
+.in-cart:hover {
+  background-color: rgb(232, 91, 91);
 }
 
 .cart-badge {
@@ -87,18 +95,17 @@ button {
   color: white;
   padding: 5px 10px;
   border-radius: 50%;
-  position: absolute;
-  margin-top: 1em; /* added position and margin to fix badge that was stretched on bottom of screen */
-  margin-bottom: 10px;
+  display: inline;
 }
 
-body.dark-mode {
-  background-color: rgb(48, 48, 48);
-  color: rgb(230, 195, 239);
-}
+
 
 body.light-mode {
   background-color: white;
   color: black;
 }
 
+body.dark-mode {
+  background-color: rgb(48, 48, 48);
+  color: rgb(230, 195, 239);
+}

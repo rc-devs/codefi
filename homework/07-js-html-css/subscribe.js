@@ -86,21 +86,20 @@ function toggleCart() {
 
 document.querySelector('.js-cart-button').addEventListener('click', toggleCart);
 
-//toggle darkmode; was able to make the toggle button, but had to look at solution to figure out how to affect whole page
-function toggleDarkMode() {
+//toggle darkmode; was able to make the toggle button, but had to look at solution to figure out how to affect whole page; issue was function name - toggleDarkMode would cause an error...
+function toggleDark() {
   const body = document.body;
-  const toggleDark = document.querySelector(".js-dark-mode");
+  const toggleDark = document.querySelector('.js-dark-mode');
 
-  if (body.classList.contains("dark-mode")) {
-    body.classList.add("light-mode") ;
-    body.classList.remove("dark-mode");
-    toggleDark.innerHTML = "Enable Dark Mode";
+  if (body.classList.contains('dark-mode')) {
+    body.classList.remove('dark-mode');
+    body.classList.add('light-mode');
+    toggleDark.innerHTML = 'Enable Dark Mode';
   } else {
-    body.classList.remove("light-mode");
-    body.classList.add("dark-mode");
-    toggleDark.innerHTML = "Enable Light Mode";
-  }  
+    body.classList.remove('light-mode');
+    body.classList.add('dark-mode');
+    toggleDark.innerHTML = 'Enable Light Mode';
+  } 
 }
 
-document.querySelector('.js-dark-mode').addEventListener('click', toggleDarkMode);
-
+document.querySelector('.js-dark-mode').addEventListener('click', toggleDark);
