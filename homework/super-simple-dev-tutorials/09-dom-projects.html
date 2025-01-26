@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Projects</title>
+</head>
+<body>
+  <p>YouTube Subscribe Button</p>
+  <button onclick="subscribe()" class="js-subscribe-button">  Subscribe  </button>
+
+  <p>Amazon Shipping Calculator</p>
+  <input placeholder="Cost of order" class="js-cost-input" onkeydown="console.log('typing'); console.log(event.key); handleCostKeydown(event) ;
+  ">
+  <button onclick="calculateTotal();" onkeydown="calculateTotal()">Caclulate</button>
+  <p class="js-total-cost"></p>
+  
+  <script>
+    String(25) //strings behave strangely. use Number()
+    console.log('25' - 5); //does math
+    console.log('25' + 5); //converts to string then concatenates 
+
+    window.document //gives us the same document object as .document
+    window.console //gives us the console as console.log
+    window.console.log('window'); //we dont have to type out window bc js already knows
+
+    function handleCostKeydown(event) {
+      if (event.key === 'Enter') {
+        calculateTotal();
+      }
+    }
+
+    function calculateTotal() {
+     const inputElement =document.querySelector('.js-cost-input');
+     let cost =Number(inputElement.value);
+    
+     if (cost < 40) {
+       cost = cost + 10;
+       console.log(cost);
+     }
+     
+
+     document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+    }
+
+
+  function subscribe(){
+    const buttonElement = document.querySelector('.js-subscribe-button');
+
+    if (buttonElement.innerText === 'Subscribe') {
+      buttonElement.innerText = 'Subscribed';
+    } else {
+      buttonElement.innerText = 'Subscribe';
+    }; //using innerText to search innerHTMl for the word Subscribe without the extra spaces. innerHTML would not work with extra spaces
+  }
+
+  </script>
+</body>
+</html>

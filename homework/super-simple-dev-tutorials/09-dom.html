@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Object Model (DOM)</title>
+</head>
+<body>
+  <button>Hello</button>
+  <button class="js-button">Second Button</button>
+
+  <script>
+    console.log(document.querySelector('button')); //gets whole html element
+    console.log(document.querySelector('button').innerHTML); //gets what is inside the html element; in this case string hello, but could include other elements as well
+    console.log(document.querySelector('button')
+      .innerHTML = 'Changed'); //ids html element, ids inner, and reassigns value 
+
+    const buttonElement = document.querySelector('.js-button'); //js objects are values, and so can be assigned to variables
+
+    console.log(buttonElement);
+
+   /* console.log(document.title);
+    document.title = "Changed title";
+
+    console.log(document.body);
+    console.log(typeof document.body); //shows that body element is a js object when referenced
+
+    console.log(document.body.innerHTML); //controls all the html inside the body
+    document.body.innerHTML = '<button> You are a potato :) </button>';
+ */
+       
+  /*  document.body.innerHTML = 'hello';//removes html within body element and replaces with 'hello' value
+    document.title = 'Good job!'; //reassigns title element value */
+  </script>
+</body>
+</html>
