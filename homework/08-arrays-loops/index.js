@@ -69,25 +69,38 @@ console.log(toDoList); //updated array; add
   toDoList.shift();
 console.log(toDoList); //updated array; subtract */
 
-//user input for to do list
-const inputFieldToDo = document.querySelector('#input-to-do'); //
+
+
+
+//user input for to do list (trying things out)
+const inputFieldToDo = document.querySelector('#input-to-do'); 
 const btnSubmitInput = document.querySelector('#submit-input-to-do');
 
 const displayToDo = document.querySelector('#display-to-do');
 
-let toDoList = ['Sweep', 'Dishwasher', 'Empty Trash'];
-
-
+let toDoList = [''];
+displayToDoFun();
 
 btnSubmitInput.addEventListener('click', handleInputSubmit);
 
-
-
 function handleInputSubmit() {
-  const newItem = inputFieldToDo.value;
-  toDoList.push(newItem);
-  displayToDo.textContent = toDoList;
-}
+  
+  toDoList.push(inputFieldToDo.value);
+  displayToDo.innerHTML= toDoList;
+};
+
+function displayToDoFun() {
+  let todoDisplay = '';
+
+  for (let i = 0; i < toDoList; i++) {
+    const todo = toDoList[i];
+    const display = `<p>${todo}</p>`;
+    todoDisplay += display;
+  }
+
+  console.log(todoDisplay);
+  document.querySelector('#display-to-do').innerHTML = todoDisplay;
+};
 
 
 

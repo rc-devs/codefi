@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays and Loops</title>
+  <style>
+   
+  </style>
+</head>
+<body>
+  <main>
+
+  </main>
+  <script>
+
+    //ARRAYS
+    /* const myArray = [10, 20, 30]; //assigns array to a variable
+    console.log(myArray);
+    console.log(myArray[0]); //logs first value, 10, index 0
+
+    myArray[0] = 99; //reassigns value at the 0 position in the array
+    console.log(myArray);
+
+    [1, 'hello', true, {name: 'socks'}, [1, 2]]; // array with dataytpes, object, and nested array
+    console.log(typeof [1, 2]); //logs 'object'; arrays are objects
+    console.log(Array.isArray([1, 2])); //logs 'true', to confirm that this is indeed an array
+
+    console.log(myArray.length); //.length property tells us how many values in array
+    
+    myArray.push(100); //.push(x) adds a new value to the end of the array
+    console.log(myArray);
+
+    myArray.splice(0, 1); //.splice(x , x) removes item from array; first input is index, second is number of values removed starting at desired index
+    console.log(myArray); */
+
+
+    //LOOPS
+
+    //while loop
+    console.log('While loop');
+
+    let i = 1; //loop variable
+
+    while (i <= 5) {
+      console.log(i);
+      i++; //increment step; if done correctly, allows the loop to terminate
+        }; 
+
+        
+    //for loop
+    console.log('For loop')
+    
+    for (let i = 1; i <=5; i++) { 
+      console.log(i);
+    }
+
+
+    //nonstandard while loop example
+    let randomNumber = 0;
+    while (randomNumber < 0.5) {
+      randomNumber = Math.random();
+    }
+    console.log('Non-standard loop');
+    console.log(randomNumber);
+
+
+    //looping through an array
+    console.log('Looping through an array');
+    
+    const todoList = [
+      'make dinner',
+      'wash dishes',
+      'watch youtube',
+    ];
+
+    for (let index = 0; index <= todoList.length -1; index++){
+      const value = todoList[index]; //todoList[index] === arrayVariable[aValueOfArray]
+      console.log(value);
+    }
+
+    //looping through an array (shortcuts)
+    console.log('Looping through an array w/ shortcuts in code');
+
+    const todoList2 = [
+      'make dinner',
+      'wash dishes',
+      'watch youtube',
+    ];
+
+    for (let i = 0; i < todoList2.length; i++){
+      const value = todoList2[i]; //todoList[i] === arrayVariable[aValueOfArray]
+      console.log(value);
+    }
+
+    //accumulator pattern
+    console.log('Accumulator Pattern');
+
+    const nums = [1, 1, 3];
+    let total = 0; //variable to store result (the accumulator variable)
+
+    for (let i = 0; i < nums.length; i++) {//loop through array
+      const num = nums[i];
+      total += num; //total = total + num; + update result
+    }
+
+    console.log(`Total from accumulator patter is ${total}.`);
+
+    //accumulator pattern 2; double array values in their indexes
+    console.log(`Accumulator array, double array values of ${nums}`);
+    const numsDoubled = []; //accumulator array is empty array
+
+    for (let i = 0; i < nums.length; i++) {
+      const num = nums[i];
+      numsDoubled.push(num * 2);
+    }
+    console.log(numsDoubled);
+    console.log(`the new values of the array are ${numsDoubled}`);
+
+
+
+
+
+
+  </script>
+</body>
+</html>
