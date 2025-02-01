@@ -17,18 +17,24 @@ Algorithm for Display On Page
  */
 
 
-const todoList = ['make dinner', 'wash dishes']; //empty array
+const todoList = [{
+  name:'make dinner', 
+  dueDate:'2025-02-10',
+}, {name:'wash dishes',
+dueDate:'2025-02-10'}]; //empty array
 
 renderTodoList();
 
 //ADD TODO Function
 
 function addTodo() { 
- const inputElement = document.querySelector('#js-name-input'); 
+ const inputElement = document.querySelector('#js-name-input');
+ const dateInputElement = document.querySelector('#js-due-date-input');
  const name = inputElement.value; 
+ const dueDate = dateInputElement.value;
 
- todoList.push(name); 
- console.log(todoList); 
+ todoList.push({name: name, 
+  dueDate: dueDate}); //could put dueDate once because the property and variable name are the same (shorthand property syntax)
 
  inputElement.value = ""; 
 
@@ -42,12 +48,26 @@ function renderTodoList() {
   let todoListHTML = '';//(accumulator variable)
   
   for (let i = 0; i < todoList.length; i++) {
-    const todo = todoList[i];
-    const html = `<p>${todo}</p>`; 
+    const todoObject = todoList[i];
+   /*  const name = todoObject.name;
+    const dueDate = todoObject.dueDate; */
+    const { name, dueDate } = todoObject;
+    const html = 
+    `
+    <div class="todo-render name">${name}</div>
+    <div class="todo-render date">${dueDate}</div>
+       
+      <button class="delete-button" onclick=
+      "
+        todoList.splice(${i}, 1);
+        renderTodoList()
+      "
+      >Delete</button>
+    `; 
     todoListHTML += html;
   }
 
-  console.log(todoListHTML);
+ 
 
   document.querySelector('#js-todo-list').innerHTML = todoListHTML;
 };

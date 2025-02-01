@@ -38,7 +38,7 @@
     //LOOPS
 
     //while loop
-    console.log('While loop');
+    /* console.log('While loop');
 
     let i = 1; //loop variable
 
@@ -115,11 +115,83 @@
       numsDoubled.push(num * 2);
     }
     console.log(numsDoubled);
-    console.log(`the new values of the array are ${numsDoubled}`);
+    console.log(`the new values of the array are ${numsDoubled}`); */
 
 
+  //11.1
+    //arrays are references
+    const array1 = [1, 2, 3]
+    const array2 = array1.slice(); //makes a copy of the array for its own reference
+    array2.push(4); //pushes 4 into array referenced by 
+    console.log(array1); //logs 1, 2, 3, 4
+    console.log(array2 ); //logs 1, 2, 3, 4'
+
+   //destructuring arrays
+    const array3 = [1, 2, 3]; 
+    /* const firstValue = array3[1]; */ 
+    /* const secondValue = array3[2]; */ 
+    const [firstValue, secondValue] = [1, 2, 3];
 
 
+    //Loop features (loop and continue)
+    //break
+    console.log('for loop with break')
+    for (let i = 1; i <= 10; i++) {
+      console.log(i);
+      if (i === 8) {
+        break;
+      }
+    }
+
+    //continue
+    console.log('for loop with continue and break')
+    for (let i = 1; i <= 10; i++) {
+      if (i === 3) {
+        continue
+      } 
+      console.log(i);
+      if (i === 8) {
+        break;
+      }
+    }
+
+    //continue divisible by 3
+    console.log('for loop with continue divisible by three')
+    for (let i = 1; i <= 10; i++) {
+      if (i % 3 === 0) {
+        continue
+      } 
+    }
+
+    //while loop w/continue
+    console.log('while loop w/ continue. skip divisible by three');
+    let i = 1;
+   
+    while (i <= 10) {
+    if (i % 3 === 0) {
+      i++; 
+      continue;
+    }
+    console.log(i);
+    i++
+  }
+
+  //loops with functions
+  function doubleArrayValues(nums) {
+    const numsDoubled = []; //accumulator array is empty array
+  
+    for (let i = 0; i < nums.length; i++) {
+      const num = nums[i];
+      if (num === 0) {
+        return numsDoubled;
+      }
+      numsDoubled.push(num * 2);
+    }
+    return numsDoubled;
+  }
+
+  console.log(doubleArrayValues([1, 1, 3]));
+  console.log(doubleArrayValues([2, 2, 5, 0, 5]));
 
 
   </script>
