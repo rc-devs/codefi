@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="scripts/11-todo-list.js" defer></script>
+  <link rel="stylesheet" href="styles/11-todo-list.css">
+  <title>To Do List</title>
+</head>
+<body>
+  <p>Todo List</p>
+  <div class="input-grid-container">
+    <input type="text" id="js-name-input" placeholder="Todo name" >
+    <input type="date" class="js-due-date-input" id="js-due-date-input">
+    <button class="add-button" id="js-add-todo-button" onclick="addTodo()">Add</button>
+  </div>
+  <div id="js-todo-list" class="js-todo-list todo-grid"></div>
+
+  
+</body>
+</html>
