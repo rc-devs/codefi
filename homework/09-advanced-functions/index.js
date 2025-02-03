@@ -95,3 +95,21 @@ console.log(arrowSquare(5));
 
  //Timing exercise 2; repeat an action
 setInterval(() => {console.log("Repeating action!")}, 4000);
+
+
+///personal test arrow functions
+
+const math1 = (a, b) => a * b;
+console.log('personal arrow function');
+console.log(math1(10, 40));
+
+const math2 = a => a + 23;
+console.log('personal arrow function');
+console.log(math2(40));
+
+//personal test .map()
+const myArray1 = [1, 2, 3, 4, 5];
+
+const myNewArray1 = myArray1.map((x) => x * 3);
+console.log('personal .map() test');
+console.log(myNewArray1);
