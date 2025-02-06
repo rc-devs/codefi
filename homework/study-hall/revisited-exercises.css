@@ -1,0 +1,51 @@
+* {
+  background-color: rgb(20, 20, 20);
+  color: orange;
+}
+
+hr {
+  background-color: orange;
+}
+
+.style-div-1 {
+  margin: 20px 20px;
+  padding: 2em;
+  border: 2px orange dotted;
+}
+
+.style-div-2 {
+  margin: 40px 40px ;
+  padding: 10px;
+  border: 5px red solid;
+}
+
+.style-div-3 {
+  margin: none;
+  padding: none;
+  border: 2px blue dashed;
+}
+
+.nav-menu {
+  display: flex;
+}
+
+li {
+  margin: 10px;
+  list-style: none;
+}
+
+a {
+  padding: .5em;
+  background-color: orange;
+  color: black;
+}
+
+a:hover {
+  background-color: black;
+  color: orange;
+  cursor: pointer;
+}
+
+section {
+  background-image: url("/homework/super-simple-dev-tutorials/img/scissors-emoji.png");
+}
