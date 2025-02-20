@@ -1,0 +1,39 @@
+<!-- copied from homework reading not my code -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Text with jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script><!-- cdn link to page -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      h2 {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h2 id="heading">Click the button to change this text</h2>
+    <button id="changeTextButton">Change Text</button>
+
+    <script>
+      // jQuery function to change the text when the button is clicked
+      $(document).ready(function() {
+        $('#changeTextButton').click(function() {
+          $('#heading').text('The text has been changed!'); /* jquery stuff */
+        });
+      });
+    </script>
+
+  </body>
+</html>
