@@ -1,0 +1,16 @@
+h1 {
+  border: solid orange 2px;
+  border-radius: 2em;
+  text-align: center;
+  padding: 5px 5px;
+}
+
+button {
+  display: block;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+input {
+  margin-top: 20px;
+}
