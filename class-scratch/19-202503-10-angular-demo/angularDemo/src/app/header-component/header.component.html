@@ -1,5 +1,7 @@
-<h1>{{title}}</h1>
-<p>{{description}}</p>
-
-<input type="text" {([(ngModel)]="inputText")} placeholder="type">
-<p>This is what the user entered: {{inputText}}</p>
+Button:
+<header>
+  <h1>{{ title }}</h1>
+  <input [(ngModel)]="inputText" placeholder="Type something...">
+  <button (click)="submitHandler()">Submit</button>
+  <p>You typed: {{ inputText }}</p>
+</header>
