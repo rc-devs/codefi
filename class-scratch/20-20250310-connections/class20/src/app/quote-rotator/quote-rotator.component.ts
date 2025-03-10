@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { QuoteCardComponent } from './quote-card/quote-card.component';
 
 @Component({
@@ -8,5 +8,6 @@ import { QuoteCardComponent } from './quote-card/quote-card.component';
   styleUrl: './quote-rotator.component.css'
 })
 export class QuoteRotatorComponent {
-
+    quotes = signal(['quote 1', 'quote 2', 'quote 3']);
+    currentQuote = signal(this.quotes);
 }
