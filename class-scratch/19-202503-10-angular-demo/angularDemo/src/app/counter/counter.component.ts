@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   templateUrl: './counter.component.html',
   styleUrl: './counter.component.css'
 })
-export class CounterComponent {
 
+export class CounterComponent {
+  counter = 0;
+
+  handleClick(){
+    this.counter = this.counter + 1;
+  }
 }
