@@ -14,10 +14,15 @@ export class HeaderComponent {
   title = this.titles[0]
   description = "This is a quick intro to Angular Components";
   inputText = '';
+  message = false
 
 
   changeTitle(){
     this.title = this.titles[1]
+  }
+
+  conditionalMessage(){
+   this.message = !this.message
   }
 
   submitHandler() {

@@ -1,7 +1,17 @@
 <header>
   <h1>{{ title }}</h1>
-  <button (click)="changeTitle()">Change Title</button>
-  <input [(ngModel)]="inputText" placeholder="Type something...">
-  <button (click)="submitHandler()">Submit</button>
-  <p>You typed: {{ inputText }}</p>
+    <button (click)="changeTitle()">Change Title (ex 4)</button>
+<hr>
+  <h4>Exercise 5: Two way Binding</h4>
+    <input [(ngModel)]="inputText" placeholder="Type something...">
+    <button (click)="submitHandler()">Submit</button>
+    <p>You typed: {{ inputText }}</p>
+<hr>
+  <h4>Exercise 7: Conditional Message</h4>
+  <button (click)="conditionalMessage()">Toggle Message</button>
+  @if (message){
+    'This is the conditional message for exercise 7'
+  }
+<hr>
+
 </header>
