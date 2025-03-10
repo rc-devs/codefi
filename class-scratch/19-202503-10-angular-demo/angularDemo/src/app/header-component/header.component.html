@@ -1,6 +1,6 @@
-Button:
 <header>
   <h1>{{ title }}</h1>
+  <button (click)="changeTitle()">Change Title</button>
   <input [(ngModel)]="inputText" placeholder="Type something...">
   <button (click)="submitHandler()">Submit</button>
   <p>You typed: {{ inputText }}</p>

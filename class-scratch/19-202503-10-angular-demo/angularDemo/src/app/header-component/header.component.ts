@@ -10,12 +10,15 @@ import { FormsModule } from '@angular/forms';
 })
 
 export class HeaderComponent {
-  title = "Welcome to Angular";
+  titles = ["Welcome to Angular", "This is Angular"];
+  title = this.titles[0]
   description = "This is a quick intro to Angular Components";
   inputText = '';
 
 
-
+  changeTitle(){
+    this.title = this.titles[1]
+  }
 
   submitHandler() {
     console.log('clicked submitHandler')
