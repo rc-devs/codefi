@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './toggle-button.component.css'
 })
 export class ToggleButtonComponent {
+  message = false
 
+  toggleText() {
+    this.message = !this.message;
+  }
 }
