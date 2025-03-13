@@ -1,6 +1,10 @@
 <h3>Question 2: Task List</h3>
 
-<p>{{tasks()}}</p>
+@for (task of tasks(); track task) {
+  <li>{{task}}</li>
+} @empty {
+  <li>There are no items</li>
+}
 
 <input [(ngModel)]="newTask" placeholder="Add a new Task!">
 
