@@ -8,10 +8,10 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './task-list.component.css'
 })
 export class TaskListComponent {
-  tasks = ['Coding Homework', 'Do some stuff', 'Other stuff']
+  tasks = signal( ['Coding Homework', 'Do some stuff', 'Other stuff'])
   newTask = '';
 
   updateList(){
-    this.tasks.update(this.newTask)
+    this.tasks.update((tasks)=> [...tasks, this.newTask])
   }
 }
