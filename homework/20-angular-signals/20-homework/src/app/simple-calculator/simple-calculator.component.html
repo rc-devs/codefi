@@ -1,1 +1,13 @@
-<p>simple-calculator works!</p>
+<h3>Question 5: "Simple" Calculator</h3>
+<p>Simple maths, not so simple to make rip</p>
+
+<input [(ngModel)]="input1" placeholder="0">
+<button (click)="onAdd()">+</button>
+<button (click)="onSubract()">-</button>
+<button (click)="onMultiply()">*</button>
+<button (click)="onDivide()">/</button>
+<input [(ngModel)]="input2" placeholder="0">
+
+<p>{{answer}}</p>
+
+<hr>
