@@ -1,1 +1,14 @@
-<p>fav-color works!</p>
+<h3>Question 3: Favorite Colors</h3>
+
+
+@for (color of colors(); track color) {
+  <li>{{color}}</li>
+} @empty {
+  <li>There are no items</li>
+}
+
+<input [(ngModel)]="newColor" placeholder="Add a new Color!">
+
+<button (click)="updateList()">Add new Color</button>
+
+<hr>
