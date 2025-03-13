@@ -15,4 +15,4 @@ export class TaskListComponent {
     this.tasks.update((tasks)=> [...tasks, this.newTask])
     this.newTask = '';
   }
-}
+};
