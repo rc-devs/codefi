@@ -13,6 +13,6 @@ export class FavColorComponent {
 
   updateColors(){
     this.colors.update((colors)=> [...colors, this.newColor])
-    this.newColor = '';
+    this.newColor = ''; 
   }
 }
