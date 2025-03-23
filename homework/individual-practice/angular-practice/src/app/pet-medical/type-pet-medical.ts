@@ -1,7 +1,8 @@
-export type PetMedicalData = {
+export interface PetMedicalData {
   nameFirst: string,
   nickname: string,
   dateLastVisit: string,
   dateNextVisit: string,
-  medications: [], 
+  medications: string,
+  treats: boolean,
 }
