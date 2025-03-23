@@ -1,4 +1,4 @@
-<h2>Grocery List</h2>
+<h2>Pantry Inventory</h2>
 <table>
   <tr>
     <th>Item</th>
@@ -18,7 +18,7 @@
 </table>
 
 @if (groceryList()) {
-  <h3>Your List</h3>
+  <h3>Grocery List</h3>
   <table>
   <tr>
     <th>Item</th>
@@ -28,6 +28,7 @@
   <tr>
     <td class="item-column">{{item.itemName}}</td>
     <td>{{item.buyQty}}</td>
+    <td><button (click)="removeFromList(item.itemName )">Remove from List</button></td>
   </tr>
   }
   </table>

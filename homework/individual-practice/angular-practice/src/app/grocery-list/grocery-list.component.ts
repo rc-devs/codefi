@@ -13,6 +13,8 @@ export class GroceryListComponent {
     itemName: '',
     buyQty: 0,
   }]);
+
+
   pantryInventory = signal<GroceryItem[]>([{
     id: 'i1',
     name: 'Potato',
@@ -80,5 +82,13 @@ export class GroceryListComponent {
 
     this.groceryList().push(newItem)
     alert(`${shortage} ${itemName} added to your Grocery List!`)
+   }
+
+   removeFromList(itemName:string, ){
+    console.log(itemName)
+
+    this.groceryList()
+    this.groceryList().splice(0,1)
+    console.log(`Removed from your Grocery List!`)
    }
 }
