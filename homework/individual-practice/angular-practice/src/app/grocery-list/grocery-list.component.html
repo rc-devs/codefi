@@ -12,6 +12,7 @@
     <td>{{item.currentQty}}</td>
     <td>{{item.requiredQty}}</td>
     <td>{{calculateShortage(item.currentQty, item.requiredQty)}}</td>
+    <td><button (click)="addToList(item.name)">Add to Grocery List</button></td>
   </tr>
 }
 <hr>
