@@ -4,5 +4,12 @@
 <p>Date of Last Vet Visit {{patientProfile().dateLastVisit}}</p>
 <p>Date of Next Vet Visit {{patientProfile().dateNextVisit}}</p>
 <p>Medications: {{patientProfile().medications}}</p>
-<p>Treats? {{patientProfile().treats}}</p>
+<p>Treats?</p>
+
+  @if (patientProfile().treats) {
+  <p>This good baby requires treats!!!</p>
+  } @else {
+  <p>This baby is too stinky for treats.</p>
+  }
+
 

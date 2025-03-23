@@ -15,6 +15,7 @@ export class PetMedicalComponent {
     dateNextVisit: "20250501",
     medications: "proin",
     treats: true,
-  },
-)
+  })
+
+  
 }
