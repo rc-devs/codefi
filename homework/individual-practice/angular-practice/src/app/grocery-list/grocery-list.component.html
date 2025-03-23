@@ -19,12 +19,19 @@
 
 @if (groceryList()) {
   <h3>Your List</h3>
-  @for (item of groceryList(); track item.name) {
+  <table>
+  <tr>
+    <th>Item</th>
+    <th>Buy Quantity</th>
+  </tr>
+  @for (item of groceryList(); track item.itemName) {
     <tr>
-      <td>{{item.name}}</td>
+      <td>{{item.itemName}}</td>
       <td>{{item.buyQty}}</td>
     </tr>
+
   }
+  </table>
 }
 
 <hr>

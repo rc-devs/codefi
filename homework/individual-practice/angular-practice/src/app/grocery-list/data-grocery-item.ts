@@ -6,6 +6,6 @@ export interface GroceryItem {
 }
 
 export interface GroceryList {
-  name: string,
+  itemName: string,
   buyQty: number;
 }

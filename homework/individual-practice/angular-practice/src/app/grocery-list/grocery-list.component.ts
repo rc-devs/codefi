@@ -10,7 +10,7 @@ import { GroceryItem, GroceryList } from './data-grocery-item';
 })
 export class GroceryListComponent {
   groceryList = signal<GroceryList[]>([{
-    name: '',
+    itemName: '',
     buyQty: 0,
   }]);
   pantryInventory = signal<GroceryItem[]>([{
@@ -73,11 +73,12 @@ export class GroceryListComponent {
   }
 
   addToList(itemName:string, shortage:number){
-    this.groceryList = signal<GroceryList[]>([{
-      name: itemName,
+    let newItem = {
+      itemName: itemName,
       buyQty: shortage,
-    }]);
-    console.log(itemName, shortage)
+    };
+
+    this.groceryList().push(newItem)
     alert(`${shortage} ${itemName} added to your Grocery List!`)
    }
 }
