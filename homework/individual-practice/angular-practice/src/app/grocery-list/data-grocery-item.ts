@@ -3,7 +3,6 @@ export interface GroceryItem {
   name: string,
   currentQty: number,
   requiredQty: number,
-  buyQty: number ,
 }
 
 
