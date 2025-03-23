@@ -1,9 +1,12 @@
+//angular imports
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+
+//component imports
+import { PetMedicalComponent } from './pet-medical/pet-medical.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [PetMedicalComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
