@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './pet-medical.component.css'
 })
 export class PetMedicalComponent {
-
+  
 }
