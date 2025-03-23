@@ -1,8 +1,8 @@
-<h2>Medical Information</h2>
+<h2>Pet Medical Information</h2>
 
-<p>Name: {{}} "{{}}"</p>
-<p>Date of Last Vet Visit {{}}</p>
-<p>Date of Next Vet Visit {{}}</p>
-<p>Medications: {{}}</p>
-<p>Treats? {{}}</p>
+<p>Name: {{patientProfile().nameFirst}} "{{patientProfile().nickname}}"</p>
+<p>Date of Last Vet Visit {{patientProfile().dateLastVisit}}</p>
+<p>Date of Next Vet Visit {{patientProfile().dateNextVisit}}</p>
+<p>Medications: {{patientProfile().medications}}</p>
+<p>Treats? {{patientProfile().treats}}</p>
 
