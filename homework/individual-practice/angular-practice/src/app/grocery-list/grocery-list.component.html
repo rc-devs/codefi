@@ -8,7 +8,7 @@
   </tr>
 @for (item of pantryInventory(); track item.id) {
   <tr>
-    <td>{{item.name}}</td>
+    <td class="item-column">{{item.name}}</td>
     <td>{{item.currentQty}}</td>
     <td>{{item.requiredQty}}</td>
     <td>{{calculateShortage(item.currentQty, item.requiredQty)}}</td>
@@ -24,12 +24,11 @@
     <th>Item</th>
     <th>Buy Quantity</th>
   </tr>
-  @for (item of groceryList(); track item.itemName) {
-    <tr>
-      <td>{{item.itemName}}</td>
-      <td>{{item.buyQty}}</td>
-    </tr>
-
+@for (item of groceryList(); track item.itemName) {
+  <tr>
+    <td class="item-column">{{item.itemName}}</td>
+    <td>{{item.buyQty}}</td>
+  </tr>
   }
   </table>
 }
