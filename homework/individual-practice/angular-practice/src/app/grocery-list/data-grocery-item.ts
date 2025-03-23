@@ -5,4 +5,7 @@ export interface GroceryItem {
   requiredQty: number,
 }
 
-
+export interface GroceryList {
+  name: string,
+  buyQty: number;
+}

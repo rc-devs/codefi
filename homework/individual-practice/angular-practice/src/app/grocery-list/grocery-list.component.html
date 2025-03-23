@@ -12,8 +12,19 @@
     <td>{{item.currentQty}}</td>
     <td>{{item.requiredQty}}</td>
     <td>{{calculateShortage(item.currentQty, item.requiredQty)}}</td>
-    <td><button (click)="addToList(item.name)">Add to Grocery List</button></td>
+    <td><button (click)="addToList(item.name, calculateShortage(item.currentQty, item.requiredQty))">Add to Grocery List</button></td>
   </tr>
 }
-<hr>
 </table>
+
+@if (groceryList()) {
+  <h3>Your List</h3>
+  @for (item of groceryList(); track item.name) {
+    <tr>
+      <td>{{item.name}}</td>
+      <td>{{item.buyQty}}</td>
+    </tr>
+  }
+}
+
+<hr>

@@ -1,15 +1,18 @@
 import { Component, signal } from '@angular/core';
-import { GroceryItem } from './data-grocery-item';
-import { FormsModule } from '@angular/forms';
+import { GroceryItem, GroceryList } from './data-grocery-item';
+
 
 @Component({
   selector: 'app-grocery-list',
-  imports: [FormsModule],
+  imports: [],
   templateUrl: './grocery-list.component.html',
   styleUrl: './grocery-list.component.css'
 })
 export class GroceryListComponent {
-
+  groceryList = signal<GroceryList[]>([{
+    name: '',
+    buyQty: 0,
+  }]);
   pantryInventory = signal<GroceryItem[]>([{
     id: 'i1',
     name: 'Potato',
@@ -67,7 +70,14 @@ export class GroceryListComponent {
     }
 
       return shortage;
-   console.log(shortage)
   }
 
+  addToList(itemName:string, shortage:number){
+    this.groceryList = signal<GroceryList[]>([{
+      name: itemName,
+      buyQty: shortage,
+    }]);
+    console.log(itemName, shortage)
+    alert(`${shortage} ${itemName} added to your Grocery List!`)
+   }
 }
