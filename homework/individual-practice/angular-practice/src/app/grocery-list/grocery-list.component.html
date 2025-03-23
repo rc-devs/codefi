@@ -1,1 +1,18 @@
-<p>grocery-list works!</p>
+<h2>Grocery List</h2>
+<table>
+  <tr>
+    <th>Item</th>
+    <th>Current Quantity</th>
+    <th>Required Quantity</th>
+    <th>Buy Quantity</th>
+  </tr>
+@for (item of groceryList(); track item.id) {
+  <tr>
+    <td>{{item.name}}</td>
+    <td>{{item.currentQty}}</td>
+    <td>{{item.requiredQty}}</td>
+    <td>{{item.buyQty}}</td>
+  </tr>
+}
+<hr>
+</table>
