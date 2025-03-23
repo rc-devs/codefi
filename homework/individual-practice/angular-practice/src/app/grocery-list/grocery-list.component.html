@@ -6,7 +6,7 @@
     <th>Required Quantity</th>
     <th>Buy Quantity</th>
   </tr>
-@for (item of groceryList(); track item.id) {
+@for (item of pantryInventory(); track item.id) {
   <tr>
     <td>{{item.name}}</td>
     <td>{{item.currentQty}}</td>

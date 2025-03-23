@@ -8,7 +8,7 @@ import { GroceryItem } from './data-grocery-item';
   styleUrl: './grocery-list.component.css'
 })
 export class GroceryListComponent {
-  groceryList = signal<GroceryItem[]>([{
+  pantryInventory = signal<GroceryItem[]>([{
     id: 'i1',
     name: 'Potato',
     currentQty: 0,
