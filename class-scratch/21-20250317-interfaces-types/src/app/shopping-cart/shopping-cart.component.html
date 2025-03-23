@@ -1,0 +1,7 @@
+<h2>Shopping Cart</h2>
+
+@for (item of items(); track item) {
+  <p>{{item}} <button (click)="handleDelete(item)">Delete</button> </p>
+}
+
+<hr>
