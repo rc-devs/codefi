@@ -56,4 +56,17 @@ export class GroceryListComponent {
     currentQty: 0,
     requiredQty: 1,
   },])
+
+  calculateShortage(currentQty:number, requiredQty:number){
+    let shortage = requiredQty - currentQty;
+
+    if (shortage <= 0){
+      shortage = 0;
+    }
+
+      return shortage;
+   console.log(shortage)
+  }
+
+
 }

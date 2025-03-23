@@ -11,7 +11,7 @@
     <td>{{item.name}}</td>
     <td>{{item.currentQty}}</td>
     <td>{{item.requiredQty}}</td>
-    <td>{{item.buyQty}}</td>
+    <td>{{calculateShortage(item.currentQty, item.requiredQty)}}</td>
   </tr>
 }
 <hr>
