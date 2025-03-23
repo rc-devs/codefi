@@ -84,11 +84,10 @@ export class GroceryListComponent {
     alert(`${shortage} ${itemName} added to your Grocery List!`)
    }
 
-   removeFromList(itemName:string, ){
-    console.log(itemName)
+   removeFromList(itemName:string){
+    let index = this.groceryList().findIndex(object => object.itemName === itemName)
+    this.groceryList().splice(index, 1)
 
-    this.groceryList()
-    this.groceryList().splice(0,1)
-    console.log(`Removed from your Grocery List!`)
+    alert(`${itemName} was removed from your Grocery List.`)
    }
 }
